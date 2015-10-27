@@ -153,7 +153,7 @@
 .cv-hobby {
 	@extend .empty-list;
 	@extend .clearfix;
-	margin: -16px;
+	margin: 0 -16px 0;
 
 	>li {
 		text-align: center;

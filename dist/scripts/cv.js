@@ -105,6 +105,19 @@ $( document ).ready(function(){
         return false;
     });
 
+    $body.on('click', '.theme-settings-button', function(){
+        $('.theme-settings').toggleClass('open');
+
+        e.preventDefault();
+        return false;
+    });
+
+    $body.on('keydown', function(e){
+        if(e.keyCode == 27) {
+            $('.theme-settings').removeClass('open');
+        }
+    });
+
 
     /**
      * Charts
