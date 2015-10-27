@@ -12,6 +12,10 @@ body {
 	font: 400 1.4em/1.7142 $font-default;
 	color: $color-font;
 	background: $color-background;
+
+	@media print {
+		background: none !important;
+	}
 }
 
 ::-webkit-scrollbar {

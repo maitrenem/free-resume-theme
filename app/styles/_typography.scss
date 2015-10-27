@@ -50,26 +50,12 @@ h4 {
 }
 
 a {
-	color: inherit;
+	color: $color-base;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;
-	}
-
-	article & {
-		background-image: linear-gradient(to bottom, transparent 50%, $color-base 50%);
-		background-position: 0 88%;
-		background-repeat: repeat-x;
-		background-size: 1px 1px;
-		text-decoration: none;
-		text-shadow: 2px 0 #fff,1px 0 #fff,-1px 0 #fff,-2px 0 #fff;
-
-		&:hover {
-			background-image: linear-gradient(to bottom, transparent 50%, $color-font 50%) !important;
-			text-decoration: none;
-		}
 	}
 }
 

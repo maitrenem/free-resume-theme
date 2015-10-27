@@ -22,12 +22,9 @@
 		.slash,
 		ul li:before,
 		ol li:before,
+		a,
 		.cv-main-nav > a:hover{
 			color: $color;
-		}
-
-		article a {
-			background-image: linear-gradient(to bottom, transparent 50%, $color 50%);
 		}
 
 		.cv-main-nav > a {
@@ -39,6 +36,10 @@
 
 		.cv-tabs a {
 			color: inherit;
+		}
+
+		.theme-settings-button {
+			color: #fff;
 		}
 
 		.cv-contact-morph svg path {
@@ -53,12 +54,12 @@
 
 @for $i from 1 through 20 {
 	.background-#{$i} {
-		background-image: url(../images/backgrounds/bg-#{$i}.png) !important;
+		background-image: url(../images/backgrounds/bg-#{$i}.png);
 	}
 }
 
 //hidden extra template
 .background-chomik {
-	background-image: url(../images/backgrounds/bg-21.png) !important;
+	background-image: url(../images/backgrounds/bg-21.png);
 	color: #111133;
 }

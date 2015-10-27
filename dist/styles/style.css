@@ -957,6 +957,9 @@ body {
   font: 400 1.4em/1.7142 "Open Sans", sans-serif;
   color: #0e252d;
   background: #fff; }
+  @media print {
+    body {
+      background: none !important; } }
 
 ::-webkit-scrollbar {
   height: 10px;
@@ -1108,30 +1111,11 @@ h4 {
   margin: 0 0 1em 0; }
 
 a {
-  color: inherit;
+  color: #FAD300;
   text-decoration: none;
   cursor: pointer; }
   a:hover {
     text-decoration: underline; }
-  article a {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #FAD300));
-    background-image: -webkit-linear-gradient(top, transparent 50%, #FAD300 50%);
-    background-image: -moz-linear-gradient(top, transparent 50%, #FAD300 50%);
-    background-image: -o-linear-gradient(top, transparent 50%, #FAD300 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #FAD300 50%);
-    background-position: 0 88%;
-    background-repeat: repeat-x;
-    -webkit-background-size: 1px 1px;
-            background-size: 1px 1px;
-    text-decoration: none;
-    text-shadow: 2px 0 #fff,1px 0 #fff,-1px 0 #fff,-2px 0 #fff; }
-    article a:hover {
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #0e252d)) !important;
-      background-image: -webkit-linear-gradient(top, transparent 50%, #0e252d 50%) !important;
-      background-image: -moz-linear-gradient(top, transparent 50%, #0e252d 50%) !important;
-      background-image: -o-linear-gradient(top, transparent 50%, #0e252d 50%) !important;
-      background-image: linear-gradient(to bottom, transparent 50%, #0e252d 50%) !important;
-      text-decoration: none; }
 
 p {
   margin: 0 0 1em 0;
@@ -1658,15 +1642,9 @@ body.theme-blue .comma,
 body.theme-blue .slash,
 body.theme-blue ul li:before,
 body.theme-blue ol li:before,
+body.theme-blue a,
 body.theme-blue .cv-main-nav > a:hover {
   color: #5493E3; }
-
-body.theme-blue article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #5493E3));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #5493E3 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #5493E3 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #5493E3 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #5493E3 50%); }
 
 body.theme-blue .cv-main-nav > a {
   color: #9da2a4; }
@@ -1675,6 +1653,9 @@ body.theme-blue .cv-main-nav > a {
 
 body.theme-blue .cv-tabs a {
   color: inherit; }
+
+body.theme-blue .theme-settings-button {
+  color: #fff; }
 
 body.theme-blue .cv-contact-morph svg path {
   fill: #5493E3; }
@@ -1701,15 +1682,9 @@ body.theme-teal .comma,
 body.theme-teal .slash,
 body.theme-teal ul li:before,
 body.theme-teal ol li:before,
+body.theme-teal a,
 body.theme-teal .cv-main-nav > a:hover {
   color: #00B19E; }
-
-body.theme-teal article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #00B19E));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #00B19E 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #00B19E 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #00B19E 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #00B19E 50%); }
 
 body.theme-teal .cv-main-nav > a {
   color: #9da2a4; }
@@ -1718,6 +1693,9 @@ body.theme-teal .cv-main-nav > a {
 
 body.theme-teal .cv-tabs a {
   color: inherit; }
+
+body.theme-teal .theme-settings-button {
+  color: #fff; }
 
 body.theme-teal .cv-contact-morph svg path {
   fill: #00B19E; }
@@ -1744,15 +1722,9 @@ body.theme-violet .comma,
 body.theme-violet .slash,
 body.theme-violet ul li:before,
 body.theme-violet ol li:before,
+body.theme-violet a,
 body.theme-violet .cv-main-nav > a:hover {
   color: #9554D2; }
-
-body.theme-violet article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #9554D2));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #9554D2 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #9554D2 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #9554D2 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #9554D2 50%); }
 
 body.theme-violet .cv-main-nav > a {
   color: #9da2a4; }
@@ -1761,6 +1733,9 @@ body.theme-violet .cv-main-nav > a {
 
 body.theme-violet .cv-tabs a {
   color: inherit; }
+
+body.theme-violet .theme-settings-button {
+  color: #fff; }
 
 body.theme-violet .cv-contact-morph svg path {
   fill: #9554D2; }
@@ -1787,15 +1762,9 @@ body.theme-pink .comma,
 body.theme-pink .slash,
 body.theme-pink ul li:before,
 body.theme-pink ol li:before,
+body.theme-pink a,
 body.theme-pink .cv-main-nav > a:hover {
   color: #FF70D2; }
-
-body.theme-pink article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #FF70D2));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #FF70D2 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #FF70D2 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #FF70D2 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #FF70D2 50%); }
 
 body.theme-pink .cv-main-nav > a {
   color: #9da2a4; }
@@ -1804,6 +1773,9 @@ body.theme-pink .cv-main-nav > a {
 
 body.theme-pink .cv-tabs a {
   color: inherit; }
+
+body.theme-pink .theme-settings-button {
+  color: #fff; }
 
 body.theme-pink .cv-contact-morph svg path {
   fill: #FF70D2; }
@@ -1830,15 +1802,9 @@ body.theme-red .comma,
 body.theme-red .slash,
 body.theme-red ul li:before,
 body.theme-red ol li:before,
+body.theme-red a,
 body.theme-red .cv-main-nav > a:hover {
   color: #fe525e; }
-
-body.theme-red article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #fe525e));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #fe525e 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #fe525e 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #fe525e 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #fe525e 50%); }
 
 body.theme-red .cv-main-nav > a {
   color: #9da2a4; }
@@ -1847,6 +1813,9 @@ body.theme-red .cv-main-nav > a {
 
 body.theme-red .cv-tabs a {
   color: inherit; }
+
+body.theme-red .theme-settings-button {
+  color: #fff; }
 
 body.theme-red .cv-contact-morph svg path {
   fill: #fe525e; }
@@ -1873,15 +1842,9 @@ body.theme-orange .comma,
 body.theme-orange .slash,
 body.theme-orange ul li:before,
 body.theme-orange ol li:before,
+body.theme-orange a,
 body.theme-orange .cv-main-nav > a:hover {
   color: #FF7832; }
-
-body.theme-orange article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #FF7832));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #FF7832 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #FF7832 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #FF7832 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #FF7832 50%); }
 
 body.theme-orange .cv-main-nav > a {
   color: #9da2a4; }
@@ -1890,6 +1853,9 @@ body.theme-orange .cv-main-nav > a {
 
 body.theme-orange .cv-tabs a {
   color: inherit; }
+
+body.theme-orange .theme-settings-button {
+  color: #fff; }
 
 body.theme-orange .cv-contact-morph svg path {
   fill: #FF7832; }
@@ -1916,15 +1882,9 @@ body.theme-yellow .comma,
 body.theme-yellow .slash,
 body.theme-yellow ul li:before,
 body.theme-yellow ol li:before,
+body.theme-yellow a,
 body.theme-yellow .cv-main-nav > a:hover {
   color: #FAD300; }
-
-body.theme-yellow article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #FAD300));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #FAD300 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #FAD300 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #FAD300 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #FAD300 50%); }
 
 body.theme-yellow .cv-main-nav > a {
   color: #9da2a4; }
@@ -1933,6 +1893,9 @@ body.theme-yellow .cv-main-nav > a {
 
 body.theme-yellow .cv-tabs a {
   color: inherit; }
+
+body.theme-yellow .theme-settings-button {
+  color: #fff; }
 
 body.theme-yellow .cv-contact-morph svg path {
   fill: #FAD300; }
@@ -1959,15 +1922,9 @@ body.theme-green .comma,
 body.theme-green .slash,
 body.theme-green ul li:before,
 body.theme-green ol li:before,
+body.theme-green a,
 body.theme-green .cv-main-nav > a:hover {
   color: #89D011; }
-
-body.theme-green article a {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #89D011));
-  background-image: -webkit-linear-gradient(top, transparent 50%, #89D011 50%);
-  background-image: -moz-linear-gradient(top, transparent 50%, #89D011 50%);
-  background-image: -o-linear-gradient(top, transparent 50%, #89D011 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #89D011 50%); }
 
 body.theme-green .cv-main-nav > a {
   color: #9da2a4; }
@@ -1977,6 +1934,9 @@ body.theme-green .cv-main-nav > a {
 body.theme-green .cv-tabs a {
   color: inherit; }
 
+body.theme-green .theme-settings-button {
+  color: #fff; }
+
 body.theme-green .cv-contact-morph svg path {
   fill: #89D011; }
 
@@ -1984,67 +1944,67 @@ body.theme-green .progress .bar {
   background: #89D011; }
 
 .background-1 {
-  background-image: url(../images/backgrounds/bg-1.png) !important; }
+  background-image: url(../images/backgrounds/bg-1.png); }
 
 .background-2 {
-  background-image: url(../images/backgrounds/bg-2.png) !important; }
+  background-image: url(../images/backgrounds/bg-2.png); }
 
 .background-3 {
-  background-image: url(../images/backgrounds/bg-3.png) !important; }
+  background-image: url(../images/backgrounds/bg-3.png); }
 
 .background-4 {
-  background-image: url(../images/backgrounds/bg-4.png) !important; }
+  background-image: url(../images/backgrounds/bg-4.png); }
 
 .background-5 {
-  background-image: url(../images/backgrounds/bg-5.png) !important; }
+  background-image: url(../images/backgrounds/bg-5.png); }
 
 .background-6 {
-  background-image: url(../images/backgrounds/bg-6.png) !important; }
+  background-image: url(../images/backgrounds/bg-6.png); }
 
 .background-7 {
-  background-image: url(../images/backgrounds/bg-7.png) !important; }
+  background-image: url(../images/backgrounds/bg-7.png); }
 
 .background-8 {
-  background-image: url(../images/backgrounds/bg-8.png) !important; }
+  background-image: url(../images/backgrounds/bg-8.png); }
 
 .background-9 {
-  background-image: url(../images/backgrounds/bg-9.png) !important; }
+  background-image: url(../images/backgrounds/bg-9.png); }
 
 .background-10 {
-  background-image: url(../images/backgrounds/bg-10.png) !important; }
+  background-image: url(../images/backgrounds/bg-10.png); }
 
 .background-11 {
-  background-image: url(../images/backgrounds/bg-11.png) !important; }
+  background-image: url(../images/backgrounds/bg-11.png); }
 
 .background-12 {
-  background-image: url(../images/backgrounds/bg-12.png) !important; }
+  background-image: url(../images/backgrounds/bg-12.png); }
 
 .background-13 {
-  background-image: url(../images/backgrounds/bg-13.png) !important; }
+  background-image: url(../images/backgrounds/bg-13.png); }
 
 .background-14 {
-  background-image: url(../images/backgrounds/bg-14.png) !important; }
+  background-image: url(../images/backgrounds/bg-14.png); }
 
 .background-15 {
-  background-image: url(../images/backgrounds/bg-15.png) !important; }
+  background-image: url(../images/backgrounds/bg-15.png); }
 
 .background-16 {
-  background-image: url(../images/backgrounds/bg-16.png) !important; }
+  background-image: url(../images/backgrounds/bg-16.png); }
 
 .background-17 {
-  background-image: url(../images/backgrounds/bg-17.png) !important; }
+  background-image: url(../images/backgrounds/bg-17.png); }
 
 .background-18 {
-  background-image: url(../images/backgrounds/bg-18.png) !important; }
+  background-image: url(../images/backgrounds/bg-18.png); }
 
 .background-19 {
-  background-image: url(../images/backgrounds/bg-19.png) !important; }
+  background-image: url(../images/backgrounds/bg-19.png); }
 
 .background-20 {
-  background-image: url(../images/backgrounds/bg-20.png) !important; }
+  background-image: url(../images/backgrounds/bg-20.png); }
 
 .background-chomik {
-  background-image: url(../images/backgrounds/bg-21.png) !important;
+  background-image: url(../images/backgrounds/bg-21.png);
   color: #111133; }
 
 .theme-settings {
