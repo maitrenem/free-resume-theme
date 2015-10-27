@@ -2,6 +2,8 @@
 
 Free Resume Theme is a simple, modern and personal Resume/CV HTML Template with a unique design, whether you are a designer, programmer or manager.
 
+![Free Responsive Resume Theme](/../master/overview.jpg?raw=true)
+
 ## Main Features
 
 * Retina Ready
