@@ -1,0 +1,41 @@
+
+//fonts
+$font-default: 'Open Sans', sans-serif;
+
+//main colors
+$colors: (
+  'blue': #5493E3,
+  'teal': #00B19E,
+  'violet': #9554D2,
+  'pink': #FF70D2,
+  'red': #fe525e,
+  'orange': #FF7832,
+  'yellow': #FAD300,
+  'green': #89D011
+);
+
+//other colors
+$color-font: #0e252d;
+$color-muted: #9da2a4;
+$color-base:  map-get($colors, 'yellow');
+
+$color-background: #fff;
+$color-border: #e7e9e9;
+
+//widths
+$side-width: 184px;
+$side-padding: 32px;
+
+$content-width: 700px;
+$content-width-boxed: 960px;
+
+//breakpoints
+$mq-breakpoints: (
+	mobile:  320px,
+	tablet:  740px,
+	desktop: 980px,
+	wide:    1100px
+);
+
+//height
+$top-border-height: 4px;

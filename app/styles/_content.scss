@@ -1,0 +1,176 @@
+
+/**
+* Progress bar
+*/
+.progress {
+	display: block;
+	background: #f3f3f3;
+	background: rgba(0, 0, 0, .05);
+	height: 4px;
+	border-radius: 2px;
+	overflow: hidden;
+
+	.bar {
+		background: $color-base;
+		font-size: 12px;
+		color: #fff;
+		height: 100%;
+	}
+}
+
+
+
+
+/**
+* Jobs
+*/
+.cv-job {
+	margin: 0 0 32px 0;
+
+	h3 {
+		margin: 0;
+	}
+
+	p {
+		margin: 16px 0;
+	}
+}
+
+/**
+* Time period
+*/
+.cv-time-period {
+	.slash {
+		color: $color-base;
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+
+	@include mq(tablet) {
+		text-align: right; //rtl
+
+		@include rtl {
+			text-align: left;
+		}
+	}
+}
+
+
+/**
+* Tabs
+*/
+.cv-tabs {
+	@extend .clearfix;
+	font-size: 1.1428em;
+	margin: 8px 0 32px;
+	border-bottom: 2px solid $color-border;
+
+	a {
+		display: block;
+		float: left; //rtl
+		text-decoration: none;
+		color: inherit;
+		border-bottom: 2px solid transparent;
+		margin: 0 24px -2px 0;
+		padding: 8px 0;
+
+		transition: .3s border-color;
+
+		@include rtl {
+			float: right;
+			margin-right: 0;
+			margin-left: 24px;
+		}
+
+		&.active {
+			font-weight: 700;
+		}
+
+		&.active,
+		&:hover {
+			border-color: $color-base;
+		}
+	}
+}
+
+/**
+* Footer
+*/
+.cv-footer {
+	text-align: center;
+	color: $color-muted;
+	border-top: 1px solid $color-border;
+	padding: 32px 0 0;
+	margin: 128px 0 32px 0;
+}
+
+/**
+* Slogan
+*/
+.cv-slogan {
+	@extend .hide-print;
+	text-align: center;
+	color: transparentize($color-muted, .5);
+	font-size: 4em;
+	font-weight: 300;
+	line-height: 1.2em;
+	padding: 32px 0 64px;
+
+	strong {
+		font-weight: 800;
+	}
+}
+
+
+
+
+
+.cv-languages {
+	@extend .empty-list;
+
+	>li {
+		margin: .5em 0 1.5em;
+
+		@include rtl {
+			padding: 0;
+		}
+	}
+
+	.language-name {
+		margin: 0 0 .5em;
+		display: block;
+
+		small {
+			font-weight: 400;
+			color: $color-muted;
+			font-size: 12px;
+			display: inline-block;
+			margin-left: 8px;
+		}
+	}
+}
+
+.cv-hobby {
+	@extend .empty-list;
+	@extend .clearfix;
+	margin: -16px;
+
+	>li {
+		text-align: center;
+		width: 33.333%;
+		float: left;
+		padding: 16px;
+
+		i {
+			display: block;
+			color: rgba($color-muted, .5);
+			font-size: 3em;
+			margin: 0 0 .2em;
+		}
+
+		@include mq(tablet, $print: true) {
+			width: 20%;
+		}
+	}
+}
+

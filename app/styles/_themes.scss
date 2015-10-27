@@ -1,0 +1,64 @@
+@each $name, $color in $colors {
+	body.theme-#{$name} {
+		.cv,
+		.cv-tabs a.active,
+		.cv-tabs a:hover,
+		.theme-settings-wrap,
+		.theme-settings-wrap .button-group > a {
+			border-color: $color;
+		}
+
+		.cv-main-nav > a.active,
+		.cv-contact-nav > a.active,
+		.theme-settings-button,
+		.theme-settings-wrap .button-group > a.active,
+		.cv-gallery > li a:after {
+			background-color: $color;
+		}
+
+
+		.cv-skills>li canvas,
+		.comma,
+		.slash,
+		ul li:before,
+		ol li:before,
+		.cv-main-nav > a:hover{
+			color: $color;
+		}
+
+		article a {
+			background-image: linear-gradient(to bottom, transparent 50%, $color 50%);
+		}
+
+		.cv-main-nav > a {
+			color: $color-muted;
+			&.active {
+				color: #fff;
+			}
+		}
+
+		.cv-tabs a {
+			color: inherit;
+		}
+
+		.cv-contact-morph svg path {
+			fill: $color;
+		}
+
+		.progress .bar {
+			background: $color;
+		}
+	}
+}
+
+@for $i from 1 through 20 {
+	.background-#{$i} {
+		background-image: url(../images/backgrounds/bg-#{$i}.png) !important;
+	}
+}
+
+//hidden extra template
+.background-chomik {
+	background-image: url(../images/backgrounds/bg-21.png) !important;
+	color: #111133;
+}

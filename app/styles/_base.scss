@@ -1,0 +1,57 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font: 400 1.4em/1.7142 $font-default;
+	color: $color-font;
+	background: $color-background;
+}
+
+::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, .1);
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+
+/**
+* Clearfix helper
+*/
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+
+
+/**
+* Main cv wrap
+*/
+.cv {
+	border-top: $top-border-height solid $color-base;
+	background: #fff;
+
+	@media print {
+		border: 0;
+	}
+}

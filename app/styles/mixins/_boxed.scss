@@ -1,0 +1,7 @@
+@mixin boxed() {
+	body.cv-boxed & {
+		@include mq(wide) {
+			@content;
+		}
+	}
+}

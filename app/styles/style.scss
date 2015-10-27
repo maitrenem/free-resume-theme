@@ -1,0 +1,37 @@
+// Vendors
+@import 'vendors/simple-line-icons';
+@import 'vendors/magnific-popup';
+
+// Mixins
+@import 'mixins/rtl';
+@import 'mixins/mq';
+@import 'mixins/boxed';
+
+// App settings
+@import 'variables';
+
+// Default styles
+@import 'reset';
+@import 'base';
+
+// Typography
+@import 'grid';
+
+// Typography
+@import 'typography';
+
+// Content
+@import 'content/author';
+@import 'content/gallery';
+@import 'content/skills';
+@import 'content';
+
+@import 'navigation';
+@import 'contact';
+
+// Themes
+@import 'themes';
+@import 'settings';
+
+// Additional styles
+@import 'print';

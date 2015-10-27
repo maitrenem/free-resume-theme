@@ -1,0 +1,82 @@
+/**
+* Gallery
+*/
+.cv-gallery {
+	@extend .clearfix;
+	@extend .empty-list;
+	margin: 8px -8px;
+
+	&>li {
+		width: 50%;
+		display: block;
+		float: left; //rtl
+		padding: 8px;
+
+		@include rtl {
+			float: right;
+			padding: 8px;
+		}
+
+		@include mq(desktop) {
+			width: 33.333%;
+		}
+
+		a {
+			position: relative;
+			display: block;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, .4);
+				display: block;
+				z-index: 100;
+				opacity: 0;
+
+				transition: opacity .3s;
+			}
+
+			&:after {
+				content: '\e090';
+				font-family: 'Simple-Line-Icons';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				color: #fff;
+				text-align: center;
+				line-height: 32px;
+				width: 32px;
+				height: 32px;
+				margin-top: -16px;
+				margin-left: -16px;
+				background: $color-base;
+				z-index: 101;
+				border-radius: 3px;
+				opacity: 0;
+
+				transition: opacity .3s;
+			}
+
+			&:hover {
+				&:before,
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+
+
+
+		img {
+			display: block;
+			width: 100%;
+			position: relative;
+			z-index: 50;
+		}
+	}
+}

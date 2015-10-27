@@ -1,0 +1,109 @@
+@include boxed {
+	background: #f7f7f7;
+	background-image: url(../images/backgrounds/bg-19.png);
+}
+
+
+
+/**
+* Main wrap
+*/
+.cv-page {
+	position: relative;
+	overflow: hidden;
+
+	@include boxed {
+		max-width: $content-width-boxed;
+		margin: 40px auto;
+
+		box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+
+		.wrap {
+			padding-left: $side-width + $side-padding * 2; //rtl
+			max-width: none;
+
+			@include rtl {
+				padding-right: $side-width + $side-padding * 2;
+				padding-left: 32px;
+			}
+		}
+	}
+}
+
+
+
+/**
+* Wrap helper
+*/
+.wrap {
+	padding: 0 32px;
+	position: relative;
+
+	@include boxed {
+		max-width: $content-width + 64px;
+		margin: 0 0 0 auto;
+		padding-left: 64px;
+		padding-right: 64px;
+
+		@include rtl {
+			margin: 0 auto 0 0;
+		}
+	}
+
+	@include mq(tablet, $print: true) {
+		padding-left: $side-width + $side-padding * 2; //rtl
+		max-width: $content-width + $side-width + $side-padding * 2;
+
+		@include rtl {
+			padding-left: 32px;
+			padding-right: $side-width + $side-padding * 2;
+		}
+
+		.side {
+			margin-left: -($side-width + $side-padding); //rtl
+			width: $side-width;
+			float: left; //rtl
+			text-align: right; //rtl
+
+			@include rtl {
+				float: right;
+				text-align: left;
+				margin-left: 0;
+				margin-right: -($side-width + $side-padding);
+			}
+		}
+	}
+
+	@include mq($from: $content-width + 2 * ($side-width + $side-padding * 2) + 16px) {
+		max-width: $content-width;
+		margin: 0 auto;
+		padding-left: 0;
+
+		@include rtl {
+			padding-right: 0;
+		}
+	}
+
+	@media print {
+		margin: 0 -32px 0 -104px;
+	}
+}
+
+
+.row {
+	@extend .clearfix;
+	margin: 0 -24px;
+
+	.col-half {
+		padding: 0 24px;
+
+		@include mq(tablet, $print: true) {
+			width: 50%;
+			float: left; //rtl
+
+			@include rtl {
+				float: right;
+			}
+		}
+	}
+}

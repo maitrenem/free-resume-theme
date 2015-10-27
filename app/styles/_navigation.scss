@@ -1,0 +1,84 @@
+/**
+* Main navigation
+*/
+.cv-main-nav,
+.cv-contact-nav {
+	@extend .hide-print;
+	position: absolute;
+	top: 0;
+	padding-right: 48px; //rtl
+	right: 16px; //rtl
+
+	@include mq(wide) {
+		margin-right: -120px; //rtl
+
+		@include rtl {
+			margin-left: -120px;
+		}
+	}
+
+	@include boxed {
+		margin-right: 0;
+
+		@include rtl {
+			margin-left: 0;
+		}
+	}
+
+	@include rtl {
+		padding-right: 0;
+		padding-left: 48px;
+		right: auto;
+		left: 16px;
+	}
+
+	>a {
+		width: 48px;
+		height: 64px - $top-border-height;
+		padding-top: 24px - $top-border-height;
+		display: inline-block;
+		transition: .3s color;
+		color: $color-muted;
+		text-align: center;
+		line-height: 40px;
+		background: #fff;
+
+
+		&:hover {
+			color: $color-base;
+			text-decoration: none;
+		}
+
+		&.active {
+			background: $color-base;
+			color: #fff;
+		}
+
+		i {
+			font-size: 20px;
+		}
+	}
+}
+
+.cv-contact-nav {
+	top: 100%;
+	padding: 0; //rtl
+
+	@include rtl {
+		padding: 0; //rtl
+	}
+
+	&>a {
+		padding-top: 40px;
+		height: 80px;
+		margin-top: -16px;
+	}
+}
+
+.cv-main-nav {
+	display: none;
+
+	@include mq(tablet) {
+		display: block;
+	}
+}

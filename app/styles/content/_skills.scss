@@ -1,0 +1,53 @@
+/**
+* Skills
+*/
+.cv-skills {
+	@extend .clearfix;
+	@extend .empty-list;
+	margin: 8px -8px;
+
+	>li {
+		width: 50%;
+		display: block;
+		float: left;
+		padding: 8px;
+		position: relative;
+
+		@include mq(tablet) {
+			width: 33.333%;
+		}
+
+		@include mq(desktop, $print: true) {
+			width: 25%;
+		}
+
+		@include rtl {
+			float: right;
+			padding: 8px;
+		}
+
+		canvas {
+			display: block;
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+			color: $color-base;
+		}
+
+		.percentage {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			line-height: 120px;
+			font-size: 24px;
+			font-weight: 300;
+		}
+
+		p {
+			text-align: center;
+			margin-top: 8px;
+		}
+	}
+}

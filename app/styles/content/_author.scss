@@ -1,0 +1,72 @@
+
+/**
+* Author
+*/
+.cv-author {
+	padding: 48px 0 16px;
+
+	h1 {
+		text-align: center;
+	}
+
+	@include mq(tablet, $print: true) {
+		h1 {
+			padding-top: 24px;
+			font-size: 4em;
+			text-align: left; //rtl
+
+			@include rtl {
+				text-align: right;
+			}
+		}
+	}
+
+	@media print {
+		padding-top: 0;
+		padding-left: 0;
+
+		h1 {
+			padding-top: 0;
+			font-size: 3em;
+		}
+	}
+}
+
+
+/**
+* Photo
+*/
+.cv-photo {
+	border: 1px solid $color-border;
+	position: relative;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 32px;
+	width: $side-width;
+
+	&:before {
+		display: block;
+		content: '';
+		background: $color-background;
+		position: absolute;
+		left: 32px;
+		right: 32px;
+		top: -5px;
+		bottom: -5px;
+		z-index: 0;
+	}
+
+	img {
+		margin: 0 auto;
+		display: inline-block;
+		width: 112px;
+		height: 112px;
+		position: relative;
+		z-index: 10;
+	}
+
+	@media print {
+		padding: 0;
+		border: 0;
+	}
+}

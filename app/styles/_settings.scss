@@ -1,0 +1,153 @@
+
+.theme-settings {
+	@extend .hide-print;
+	position: fixed;
+	right: 16px;
+	bottom: 16px;
+	z-index: 100;
+
+	&-button {
+		display: block;
+		width: 48px;
+		height: 48px;
+		line-height: 50.5px;
+		font-size: 24px;
+		color: #fff;
+		border-radius: 50%;
+		text-align: center;
+		background: $color-base;
+
+		user-select: none;
+		transition: .3s background;
+
+		&:hover {
+			text-decoration: none;
+			opacity: .9;
+		}
+	}
+
+	&-wrap {
+		visibility: hidden;
+		opacity: 0;
+
+		position: absolute;
+		bottom: 140%;
+		right: 0;
+		background: #fff;
+		width: 164px;
+		padding: 0 16px 4px;
+		box-shadow: 0 3px 16px rgba(0, 0, 0, 0.16);
+		border-top: 4px solid $color-base;
+
+		transition: opacity .3s;
+
+		.open & {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border: 10px solid transparent;
+			border-top-color: #fff;
+
+			position: absolute;
+			top: 100%;
+			right: 16px;
+		}
+
+		h4 {
+			text-transform: uppercase;
+			color: $color-muted;
+			font-size: 12px;
+			letter-spacing: 1.6px;
+			margin: 1.5em 0 .5em;
+
+			small {
+				text-transform: none;
+				display: block;
+				letter-spacing: 1px;
+				font-size: 11px;
+			}
+		}
+
+		.theme-option {
+			border: 1px solid transparent;
+			display: block;
+			width: 26px;
+			height: 26px;
+			margin: 1px;
+			float: left; //rtl
+			padding: 2px;
+
+			&.active {
+				border-color: #bbb;
+			}
+
+			@include rtl {
+				float: right;
+			}
+
+			>span {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.theme-options {
+			@extend .clearfix;
+			margin: 0 0 1em;
+
+			&-list {
+				margin-left: -4px;
+				margin-right: -4px;
+			}
+		}
+
+		.button-group {
+			@extend .clearfix;
+
+			>a {
+				width: 50%;
+				float: left; //rtl
+				text-align: center;
+				border: 1px solid $color-base;
+				color: $color-muted;
+				line-height: 1;
+				padding: 8px 0;
+				user-select: none;
+
+
+				&.active {
+					background: $color-base;
+					color: #fff;
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+
+				&:first-child {
+					border-radius: 2px 0 0 2px;
+				}
+
+				&:last-child {
+					border-radius: 0 2px 2px 0;
+				}
+
+				&+a {
+					border-left-width: 0;
+				}
+			}
+		}
+	}
+
+	@each $name, $color in $colors {
+		.theme-#{$name} {
+			background: $color;
+		}
+	}
+}
